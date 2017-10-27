@@ -54,10 +54,9 @@
 </div>
 
         
-            
-  <div class="sidebar">
-    <ul class="main-menu">
-      
+            <div class="sidebar">
+  <ul class="main-menu">
+    
 
 <li><a href="/unity/" class="nav-link">Unity</a></li>
 <li><a href="/vuforia/" class="nav-link">Vuforia</a></li>
@@ -65,44 +64,87 @@
 <li><a href="/android/" class="nav-link">android</a></li>
 <!-- <li><a href="http://ask.alianhome.com/" target="_blank" class="nav-link">问答社区</a></li> -->
 <li><a href="/about/" class="nav-link">About</a></li>
-    </ul>
-  </div>
-
-
-<div class="content  ">
-
-
-    
-    
-    
-
-
-
-    <div class="footer">
-      
-      <p></p>
-<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
-<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
-<script>
-var cloudTieConfig = {
-  url: document.location.href, 
-  sourceId: "",
-  productKey: "59716dcf6d954d36acb1e8d5728b5e3b",
-  target: "cloud-tie-wrapper"
-};
-var yunManualLoad = true;
-Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
-</script>
-
-    </div>
-
-    <div class="footer">
-      发现错误或想贡献文档?
-      <a href="https://github.com/fairygui/fairygui.github.io/tree/master/src/index.md" target="_blank">
-        在 Github 上编辑此文档!
-      </a>
-    </div>
+  </ul>
 </div>
+
+<div id="hero">
+  <div class="inner">
+    <div class="right">
+      <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+          <div class="text">逮着就是一顿瞎比写 反正不知道写什么！</div>
+          <a class="button" href="/./">啥也没有</a>
+      <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+      <!--
+      <h1>
+        FairyGUI<sup>3.0</sup>
+      </h1>
+      <br/><br/><br/>
+        <div class="text">超强 UI 编辑器，跨平台开源 UI 解决方案，制作效率直接提升 50%！</div>
+        <div class="text">Unity、Cocos2dx、Starling、Egret、LayaAir、Haxe、Pixi、LibGDX and More ……</div>
+      <br/>
+      <p>
+        <a class="button" href="/product/">免费获取</a>
+      </p>
+      -->
+    </div>
+  </div>
+</div>
+
+  </br></br></br>
+  <!--
+  <div class="software">
+    <img src="/images/software.png">
+  </div>
+  -->
+</div>
+<!--
+<div id="highlights">
+  <div class="inner">
+    <div class="box big">
+      <div class="left">
+        <img src="/images/guzhu.png">
+      </div>
+      <div class="right">
+        <p>
+          重新定义 UI 制作流程，全可视化，零代码，是一款同时适用于程序员、设计师和游戏策划的UI制作工具。<br>
+配合FairyGUI-SDK，在各个游戏引擎都能得到高效的渲染表现，独特的FairyBatching技术可自动优化复杂界面的DC数量。
+        </p>
+      </div>
+    </div><br>
+  </div>
+</div>
+-->
+
+<div id="footer">
+
+  <ul class="main-menu">
+    
+
+<li><a href="/unity/" class="nav-link">Unity</a></li>
+<li><a href="/vuforia/" class="nav-link">Vuforia</a></li>
+<li><a href="/ios/" class="nav-link">ios</a></li>
+<li><a href="/android/" class="nav-link">android</a></li>
+<!-- <li><a href="http://ask.alianhome.com/" target="_blank" class="nav-link">问答社区</a></li> -->
+<li><a href="/about/" class="nav-link">About</a></li>
+  </ul>
+  <br/><br/><br/>
+
+  <!-- <p>官方QQ群: 一群 434866637（已满） 二群 614444599</p> -->
+  <p>&copy; alianhome.com 2017 <a href='http://www.miitbeian.gov.cn/'>黔ICP备15003161号-1</a> <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256364934'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1256364934%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script></p>
+</div>
+
+<script>
+var topScrolled = false
+window.addEventListener('scroll', function () {
+  if (window.pageYOffset > 165 && !topScrolled) {
+    topScrolled = true
+    document.getElementById('mobile-bar').classList.remove('top')
+  } else if (window.pageYOffset <= 165 && topScrolled) {
+    topScrolled = false
+    document.getElementById('mobile-bar').classList.add('top')
+  }
+})
+</script>
 
         
     
