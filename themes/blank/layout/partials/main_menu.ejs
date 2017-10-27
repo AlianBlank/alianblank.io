@@ -1,0 +1,10 @@
+<% var doc = page.path.match(/(about)|(android)|(ios)|(unity)|(vuforia)/) %>
+<% if (doc) { %>
+	<li><a href="<%- url_for('/') %>" class="nav-link">Home</a></li>
+<% } %>
+<li><a href="<%- url_for("/unity/")%>" class="nav-link<%- page.path.match(/unity/) ? ' current' : '' %>">Unity</a></li>
+<li><a href="<%- url_for("/vuforia/") %>" class="nav-link<%- page.path.match(/vuforia\//) ? ' current' : '' %>">Vuforia</a></li>
+<li><a href="<%- url_for("/ios/") %>" class="nav-link<%- page.path.match(/ios/) ? ' current' : '' %>">ios</a></li>
+<li><a href="<%- url_for("/android/") %>" class="nav-link<%- page.path.match(/android/) ? ' current' : '' %>">android</a></li>
+<!-- <li><a href="<%- url_for("http://ask.alianhome.com/")%>" target="_blank" class="nav-link">问答社区</a></li> -->
+<li><a href="<%- url_for("/about/") %>" class="nav-link<%- page.path.match(/about/) ? ' current' : '' %>">About</a></li>

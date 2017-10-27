@@ -1,0 +1,119 @@
+<div class="sidebar">
+    <ul class="main-menu">
+        <%- partial('partials/main_menu', { context: 'sidebar' }) %>
+    </ul>
+    <div class="list">
+		<a class="become-backer" href="<%- url_for("/about/donate.html") %>">
+            打赏
+        </a>
+<!--
+		
+        <h2>
+            <%- type === 'api' ? 'API' : (type.split('_')[0].charAt(0).toUpperCase() + type.split('_')[0].slice(1)) %>
+            <select class="version-select">
+                <option value="SELF" selected><%- type.split('_')[1] %></option>
+            </select>
+ 		<% if(type.indexOf('guide')!=-1) { %> 
+		  <a style="
+		      padding: 0 10px;
+		      margin-top: -10px;
+		      line-height: 30px;
+		      color: white;
+		      font-weight: 200;
+		      letter-spacing: 1px;"
+			target="_blank" 
+		    href="http://shang.qq.com/wpa/qunwpa?idkey=098bd1b1410eacf21973f93386d410380be58f9c59e9f9b6c571cb679e554014"><img title="FairyGUI官方交流群2" src="http://pub.idqqimg.com/wpa/images/group.png" alt="FairyGUI技术交流群" border="0" />
+		  </a>
+		<% } %>
+        </h2>
+		-->
+        <ul class="menu-root">
+            <% if (type.indexOf('guide')!=-1) { %>
+
+	 			<%  site.pages.find({type: 'guide'}).sort('order').each(function (p) { %>
+	                <% var fileName = p.path.replace(/^.+?\/([\w-]+)\.html/, '$1') %>
+	                <li>
+	                    <a href="<%- url_for(p.path) %>" class="sidebar-link<%- page.title === p.title ? ' current' : '' %><%- p.is_new ? ' new' : '' %>"><%- p.title %></a>
+	                </li>
+	            <% }) %>
+	
+	            <% site.pages.find({type: 'guide_editor'}).sort('order').each(function (p) { %>
+	                <% var fileName = p.path.replace(/^.+?\/([\w-]+)\.html/, '$1') %>
+	                <li>
+	                    <a href="<%- url_for(p.path) %>" class="sidebar-link<%- page.title === p.title ? ' current' : '' %><%- p.is_new ? ' new' : '' %>"><%- p.title %></a>
+	                </li>
+	            <% }) %>
+	
+	            <% site.pages.find({type: 'guide_unity'}).sort('order').each(function (p) { %>
+	                <% var fileName = p.path.replace(/^.+?\/([\w-]+)\.html/, '$1') %>
+	                <% if (fileName === 'index') { %>
+	                <li><h3>Unity</h3></li>
+	                <% } %>
+	                <li>
+	                    <a href="<%- url_for(p.path) %>" class="sidebar-link<%- page.title === p.title ? ' current' : '' %><%- p.is_new ? ' new' : '' %>"><%- p.title %></a>
+	                </li>
+	            <% }) %>
+
+	            <% site.pages.find({type: 'guide_laya'}).sort('order').each(function (p) { %>
+	                <% var fileName = p.path.replace(/^.+?\/([\w-]+)\.html/, '$1') %>
+	                <% if (fileName === 'index') { %>
+	                <li><h3>LayaAir</h3></li>
+	                <% } %>
+	                <li>
+	                    <a href="<%- url_for(p.path) %>" class="sidebar-link<%- page.title === p.title ? ' current' : '' %><%- p.is_new ? ' new' : '' %>"><%- p.title %></a>
+	                </li>
+	            <% }) %>
+	
+	            <% site.pages.find({type: 'guide_egret'}).sort('order').each(function (p) { %>
+	                <% var fileName = p.path.replace(/^.+?\/([\w-]+)\.html/, '$1') %>
+	                <% if (fileName === 'index') { %>
+	                <li><h3>Egret</h3></li>
+	                <% } %>
+	                <li>
+	                    <a href="<%- url_for(p.path) %>" class="sidebar-link<%- page.title === p.title ? ' current' : '' %><%- p.is_new ? ' new' : '' %>"><%- p.title %></a>
+	                </li>
+	            <% }) %>
+
+	            <% site.pages.find({type: 'guide_starling'}).sort('order').each(function (p) { %>
+	                <% var fileName = p.path.replace(/^.+?\/([\w-]+)\.html/, '$1') %>
+	                <% if (fileName === 'index') { %>
+	                <li><h3>Starling</h3></li>
+	                <% } %>
+	                <li>
+	                    <a href="<%- url_for(p.path) %>" class="sidebar-link<%- page.title === p.title ? ' current' : '' %><%- p.is_new ? ' new' : '' %>"><%- p.title %></a>
+	                </li>
+	            <% }) %>
+
+	            <% site.pages.find({type: 'guide_as3'}).sort('order').each(function (p) { %>
+	                <% var fileName = p.path.replace(/^.+?\/([\w-]+)\.html/, '$1') %>
+	                <% if (fileName === 'index') { %>
+	                <li><h3>Flash AS3</h3></li>
+	                <% } %>
+	                <li>
+	                    <a href="<%- url_for(p.path) %>" class="sidebar-link<%- page.title === p.title ? ' current' : '' %><%- p.is_new ? ' new' : '' %>"><%- p.title %></a>
+	                </li>
+	            <% }) %>
+	            
+	           	<% site.pages.find({type: 'guide_haxe'}).sort('order').each(function (p) { %>
+	                <% var fileName = p.path.replace(/^.+?\/([\w-]+)\.html/, '$1') %>
+	                <% if (fileName === 'index') { %>
+	                <li><h3>Haxe</h3></li>
+	                <% } %>
+	                <li>
+	                    <a href="<%- url_for(p.path) %>" class="sidebar-link<%- page.title === p.title ? ' current' : '' %><%- p.is_new ? ' new' : '' %>"><%- p.title %></a>
+	                </li>
+	            <% }) %>
+
+            <% } else { %>
+
+	            <% type !== 'api' && site.pages.find({type: type}).sort('order').each(function (p) { %>
+	                <% var fileName = p.path.replace(/^.+?\/([\w-]+)\.html/, '$1') %>
+	                <li>
+	                    <a href="<%- url_for(p.path) %>" class="sidebar-link<%- page.title === p.title ? ' current' : '' %><%- p.is_new ? ' new' : '' %>"><%- p.title %></a>
+	                </li>
+	            <% }) %>
+
+            <% } %>
+        </ul>
+    </div>
+</div>
