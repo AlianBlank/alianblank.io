@@ -127,15 +127,16 @@ order: 30
 
 >  mul(M, N)	
 >>  矩阵M和矩阵N的积，计算方法如下
->>  ![mul(M,N)](https://www.github.com/AlianBlank/githubimgoss/raw/shader-imgs-oss/StoryWriter/mul(M,N).jpg)
+>>  ![mul(M,N)](../images/unity/shader/mul-MN.jpg)
+
 
 >  mul(M, v)	
 >>  矩阵M和列向量v的积，公式如下
->>  ![mul(M,v)](https://www.github.com/AlianBlank/githubimgoss/raw/shader-imgs-oss/StoryWriter/mul(M,v).jpg)
+>>  ![mul(M,v)](../images/unity/shader/mul-Mv.jpg)
 
 >  mul(v, M)	
 >>  行向量v和矩阵M的积，公式如下
->>  ![mul(v,M)](https://www.github.com/AlianBlank/githubimgoss/raw/shader-imgs-oss/StoryWriter/mul(v,M).jpg)
+>>  ![mul(v,M)](../images/unity/shader/mul-vM.jpg)
 
 >  noise(x)	
 >>  根据它的参数类型，这个函数可以是一元、二元或三元噪音函数。返回的值在0和1之间，并且通常与给定的输入值一样
