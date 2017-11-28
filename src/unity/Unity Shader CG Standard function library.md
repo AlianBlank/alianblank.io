@@ -7,11 +7,8 @@ type: unity
 order: 30
 ---
 
-# Unity CG 函数
 
-
-
-# 数学函数（Mathematical Functions）
+## 数学函数=>Mathematical Functions
 
 >  abs(x)	
 >>  返回输入参数的绝对值
@@ -193,7 +190,7 @@ order: 30
 如果M是一个AxB矩阵，M的转置是一个BxA矩阵，它的第一列是M的第一行，第二列是M的第二行，第三列是M的第三行，等等
 
 
-# 几何函数(Geometric Functions)
+## 几何函数=>Geometric Functions
 
 >  distance(pt1, pt2)	
 >>  两点之间的欧几里德距离（Euclidean distance）
@@ -215,7 +212,7 @@ order: 30
 只对三元向量有效
 
 
-# 纹理映射函数(Texture Map Functions)
+## 纹理映射函数=>Texture Map Functions
 
 >  tex1D(sampler1D tex, float s)   
 >>  一维纹理查询 
@@ -291,7 +288,7 @@ order: 30
 
 
 
-### *在这个表中，每个函数第二个参数的名字指明了在执行纹理查询的时候，它的值是如果被使用的:*
+>   *在这个表中，每个函数第二个参数的名字指明了在执行纹理查询的时候，它的值是如果被使用的:*
 
 >   *s表示这是一个一元、二元或三元纹理坐标。*
 
@@ -303,7 +300,7 @@ order: 30
 
 
 
-# 偏导数函数(Derivative Functions)
+## 偏导数函数=>Derivative Functions
 
 >  ddx(a)	
 >>  参数a对应一个像素位置,返回该像素再X轴上的偏导数
@@ -315,7 +312,7 @@ order: 30
 
 
 
-# 调试函数(Debugging Function)
+## 调试函数=>Debugging Function
 
 >  void debug(float4 x)	
 >>  如果在编译时设置了DEBUG，片段着 色程序中调用该函数可以将值x作为COLOR语义的最终输出；否则该函数什么也不做。

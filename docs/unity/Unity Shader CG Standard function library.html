@@ -120,7 +120,7 @@
     
       <h1>unity Shader CG 标准函数库</h1>
     
-    <h1 id="Unity-CG-函数"><a href="#Unity-CG-函数" class="headerlink" title="Unity CG 函数"></a>Unity CG 函数</h1><h1 id="数学函数（Mathematical-Functions）"><a href="#数学函数（Mathematical-Functions）" class="headerlink" title="数学函数（Mathematical Functions）"></a>数学函数（Mathematical Functions）</h1><blockquote>
+    <h2 id="数学函数-gt-Mathematical-Functions"><a href="#数学函数-gt-Mathematical-Functions" class="headerlink" title="数学函数=&gt;Mathematical Functions"></a>数学函数=&gt;Mathematical Functions</h2><blockquote>
 <p> abs(x)    </p>
 <blockquote>
 <p> 返回输入参数的绝对值</p>
@@ -339,7 +339,7 @@
 <p> 矩阵M的转置矩阵<br>如果M是一个AxB矩阵，M的转置是一个BxA矩阵，它的第一列是M的第一行，第二列是M的第二行，第三列是M的第三行，等等</p>
 </blockquote>
 </blockquote>
-<h1 id="几何函数-Geometric-Functions"><a href="#几何函数-Geometric-Functions" class="headerlink" title="几何函数(Geometric Functions)"></a>几何函数(Geometric Functions)</h1><blockquote>
+<h2 id="几何函数-gt-Geometric-Functions"><a href="#几何函数-gt-Geometric-Functions" class="headerlink" title="几何函数=&gt;Geometric Functions"></a>几何函数=&gt;Geometric Functions</h2><blockquote>
 <p> distance(pt1, pt2)    </p>
 <blockquote>
 <p> 两点之间的欧几里德距离（Euclidean distance）</p>
@@ -365,7 +365,7 @@
 <p> 根据入射光线方向I，表面法向量N和折射相对系数eta,计算折射向量。如果对给定的eta,I和N之间的角度太大，返回(0,0,0)。<br>只对三元向量有效</p>
 </blockquote>
 </blockquote>
-<h1 id="纹理映射函数-Texture-Map-Functions"><a href="#纹理映射函数-Texture-Map-Functions" class="headerlink" title="纹理映射函数(Texture Map Functions)"></a>纹理映射函数(Texture Map Functions)</h1><blockquote>
+<h2 id="纹理映射函数-gt-Texture-Map-Functions"><a href="#纹理映射函数-gt-Texture-Map-Functions" class="headerlink" title="纹理映射函数=&gt;Texture Map Functions"></a>纹理映射函数=&gt;Texture Map Functions</h2><blockquote>
 <p> tex1D(sampler1D tex, float s)   </p>
 <blockquote>
 <p> 一维纹理查询 </p>
@@ -462,14 +462,13 @@
 <blockquote>
 <p> 查询投影立方体纹理</p>
 </blockquote>
-</blockquote>
-<h3 id="在这个表中，每个函数第二个参数的名字指明了在执行纹理查询的时候，它的值是如果被使用的"><a href="#在这个表中，每个函数第二个参数的名字指明了在执行纹理查询的时候，它的值是如果被使用的" class="headerlink" title="在这个表中，每个函数第二个参数的名字指明了在执行纹理查询的时候，它的值是如果被使用的:"></a><em>在这个表中，每个函数第二个参数的名字指明了在执行纹理查询的时候，它的值是如果被使用的:</em></h3><blockquote>
+<p>  <em>在这个表中，每个函数第二个参数的名字指明了在执行纹理查询的时候，它的值是如果被使用的:</em></p>
 <p>  <em>s表示这是一个一元、二元或三元纹理坐标。</em></p>
 <p>  <em>z表示这是一个用来进行阴影贴图查找的深度比较值。</em></p>
 <p>  <em>q表示这是一个透视值，在进行纹理查找之前，它被用来除以纹理坐标（s）。</em></p>
 <p>  当你使用的纹理函数允许你指定一个深度比较值的时候，与之相关联的纹理单元必须被设置成深度比较纹理。否则，深度比较实际上不会被执行。</p>
 </blockquote>
-<h1 id="偏导数函数-Derivative-Functions"><a href="#偏导数函数-Derivative-Functions" class="headerlink" title="偏导数函数(Derivative Functions)"></a>偏导数函数(Derivative Functions)</h1><blockquote>
+<h2 id="偏导数函数-gt-Derivative-Functions"><a href="#偏导数函数-gt-Derivative-Functions" class="headerlink" title="偏导数函数=&gt;Derivative Functions"></a>偏导数函数=&gt;Derivative Functions</h2><blockquote>
 <p> ddx(a)    </p>
 <blockquote>
 <p> 参数a对应一个像素位置,返回该像素再X轴上的偏导数</p>
@@ -479,7 +478,7 @@
 <p> 参数a对应一个像素位置,返回该像素在Y轴上的偏导数</p>
 </blockquote>
 </blockquote>
-<h1 id="调试函数-Debugging-Function"><a href="#调试函数-Debugging-Function" class="headerlink" title="调试函数(Debugging Function)"></a>调试函数(Debugging Function)</h1><blockquote>
+<h2 id="调试函数-gt-Debugging-Function"><a href="#调试函数-gt-Debugging-Function" class="headerlink" title="调试函数=&gt;Debugging Function"></a>调试函数=&gt;Debugging Function</h2><blockquote>
 <p> void debug(float4 x)    </p>
 <blockquote>
 <p> 如果在编译时设置了DEBUG，片段着 色程序中调用该函数可以将值x作为COLOR语义的最终输出；否则该函数什么也不做。</p>
