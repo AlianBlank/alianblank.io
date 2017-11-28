@@ -1,0 +1,510 @@
+
+<!DOCTYPE html>
+<html lang="zh_CN">
+    <head>
+        
+            <title>Blank - unity Shader CG 标准函数库</title>
+        
+        <meta charset="utf-8">
+        <meta name="description" content="Blank">
+        <meta name="keywords" content="SEO Blank">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="-unity Shader CG 标准函数库FairyGUI">
+        <meta property="og:description" content="Blank">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="unity Shader CG 标准函数库 — FairyGUI">
+        <meta name="twitter:description" content="Blank">
+
+        <!--  <link href='//fonts.proxy.ustclug.org/css?family=Source+Sans+Pro:300,400,600|Roboto Mono' rel='stylesheet' type='text/css'> -->
+
+        <!-- main page styles -->
+        <link rel="stylesheet" href="/css/page.css">
+
+        <!-- this needs to be loaded before guide's inline scripts -->
+        <script src="/js/vue.min.js"></script>
+        <script>window.PAGE_TYPE = "unity"</script>
+    </head>
+    <body class="docs">
+        
+            <div id="mobile-bar"  data-bg-text="Blank" >
+                <a class="menu-button"></a>
+                <a class="logo" href="https://github.com/alianblank"></a>
+            </div>
+        
+        <div id="bg"> <!--end tag in the `index.ejs`-->
+
+  <div id="header">
+    <a id="logo" href="https://github.com/alianblank/">
+      <img src="/images/github-white.png">
+    </a>
+    <ul id="nav">
+      
+
+	<li><a href="/" class="nav-link">Home</a></li>
+
+<li><a href="/unity/" class="nav-link current">Unity</a></li>
+<li><a href="/vuforia/" class="nav-link">Vuforia</a></li>
+<li><a href="/ios/" class="nav-link">ios</a></li>
+<li><a href="/android/" class="nav-link">android</a></li>
+<!-- <li><a href="http://ask.alianhome.com/" target="_blank" class="nav-link">问答社区</a></li> -->
+<li><a href="/about/" class="nav-link">About</a></li>
+    </ul>
+  </div>
+</div>
+        
+            <div id="main" class="fix-sidebar">
+                
+                    
+    <div class="sidebar">
+    <ul class="main-menu">
+        
+
+	<li><a href="/" class="nav-link">Home</a></li>
+
+<li><a href="/unity/" class="nav-link current">Unity</a></li>
+<li><a href="/vuforia/" class="nav-link">Vuforia</a></li>
+<li><a href="/ios/" class="nav-link">ios</a></li>
+<li><a href="/android/" class="nav-link">android</a></li>
+<!-- <li><a href="http://ask.alianhome.com/" target="_blank" class="nav-link">问答社区</a></li> -->
+<li><a href="/about/" class="nav-link">About</a></li>
+    </ul>
+    <div class="list">
+		<a class="become-backer" href="/about/donate.html">
+            打赏
+        </a>
+<!--
+		
+        <h2>
+            Unity
+            <select class="version-select">
+                <option value="SELF" selected></option>
+            </select>
+ 		
+        </h2>
+		-->
+        <ul class="menu-root">
+            
+
+	            
+	                
+	                <li>					
+	                    <a href="/unity/index.html" class="sidebar-link"></a>
+	                </li>
+	            
+	                
+	                <li>					
+	                    <a href="/unity/Test.html" class="sidebar-link">unity  Test</a>
+	                </li>
+	            
+	                
+	                <li>					
+	                    <a href="/unity/Unity Shader CG Standard function library.html" class="sidebar-link current">unity Shader CG 标准函数库</a>
+	                </li>
+	            
+
+            
+        </ul>
+    </div>
+</div>
+
+    
+
+
+<div class="content unity with-sidebar ">
+
+
+    
+      <h1>unity Shader CG 标准函数库</h1>
+    
+    <h1 id="Unity-CG-函数"><a href="#Unity-CG-函数" class="headerlink" title="Unity CG 函数"></a>Unity CG 函数</h1><h1 id="数学函数（Mathematical-Functions）"><a href="#数学函数（Mathematical-Functions）" class="headerlink" title="数学函数（Mathematical Functions）"></a>数学函数（Mathematical Functions）</h1><blockquote>
+<p> abs(x)    </p>
+<blockquote>
+<p> 返回输入参数的绝对值</p>
+</blockquote>
+<p> acos(x)    </p>
+<blockquote>
+<p> 反余切函数，输入参数范围为[-1,1]， 返回[0,π]区间的角度值</p>
+</blockquote>
+<p> all(x)    </p>
+<blockquote>
+<p> 如果输入参数均不为0，则返回ture； 否则返回flase。&amp;&amp;运算</p>
+</blockquote>
+<p> any(x)    </p>
+<blockquote>
+<p> 输入参数只要有其中一个不为0，则返回true。</p>
+</blockquote>
+<p> asin(x)    </p>
+<blockquote>
+<p> 反正弦函数,输入参数取值区间为[−1,1]，返回角度值范围为, [−π2,π2]</p>
+</blockquote>
+<p> atan(x)    </p>
+<blockquote>
+<p> 反正切函数，返回角度值范围为[−π2,π2]</p>
+</blockquote>
+<p> atan2(y,x)    </p>
+<blockquote>
+<p> 计算y/x的反正切值。实际上和atan(x)函数功能完全一样，至少输入参数不同。atan(x) = atan2(x, float(1))。</p>
+</blockquote>
+<p> ceil(x)    </p>
+<blockquote>
+<p> 对输入参数向上取整。例如： ceil(float(1.3)) ，其返回值为2.0</p>
+</blockquote>
+<p> clamp(x,a,b)    </p>
+<blockquote>
+<p> 如果x值小于a，则返回a；如果x值大于b，返回b；    否则，返回x。</p>
+</blockquote>
+<p> cos(x)    </p>
+<blockquote>
+<p> 返回弧度x的余弦值。返回值范围为[−1,1]</p>
+</blockquote>
+<p> cosh(x)    </p>
+<blockquote>
+<p> 双曲余弦（hyperbolic cosine）函数，计算x的双曲余弦值。</p>
+</blockquote>
+<p> cross(A,B)    </p>
+<blockquote>
+<p> 返回两个三元向量的叉积(cross product)。注意，输入参数必须是三元向量！</p>
+</blockquote>
+<p> degrees(x)    </p>
+<blockquote>
+<p> 输入参数为弧度值(radians)，函数将其转换为角度值(degrees)</p>
+</blockquote>
+<p> determinant(m)    </p>
+<blockquote>
+<p> 计算矩阵的行列式因子。</p>
+</blockquote>
+<p> dot(A,B)    </p>
+<blockquote>
+<p> 返回A和B的点积(dot product)。参数A和B可以是标量，也可以是向量（输入参数方面，点积和叉积函数有很大不同）。</p>
+</blockquote>
+<p> exp(x)    </p>
+<blockquote>
+<p> 计算ex的值，e=2.71828182845904523536</p>
+</blockquote>
+<p> exp2(x)    </p>
+<blockquote>
+<p> 计算2x的值</p>
+</blockquote>
+<p> floor(x)    </p>
+<blockquote>
+<p> 对输入参数向下取整。例如floor(float(1.3))返回的值为1.0；但是floor(float(-1.3))返回的值为-2.0。该函数与ceil(x)函数相对应。</p>
+</blockquote>
+<p> fmod(x,y)    </p>
+<blockquote>
+<p> 返回x/y的余数。如果y为0，结果不可预料。</p>
+</blockquote>
+<p> frac(x)    </p>
+<blockquote>
+<p> 返回标量或矢量的小数</p>
+</blockquote>
+<p> frexp(x, out i)    </p>
+<blockquote>
+<p> 将浮点数x分解为尾数和指数，即x=m∗2i， 返回m，并将指数存入i中；如果x为0，则尾数和指数都返回0</p>
+</blockquote>
+<p> isfinite(x)    </p>
+<blockquote>
+<p> 判断标量或者向量中的每个数据是否是有限数，如果是返回true；否则返回false;</p>
+</blockquote>
+<p> isinf(x)    </p>
+<blockquote>
+<p> 判断标量或者向量中的每个数据是否是无限，如果是返回true；否则返回false;</p>
+</blockquote>
+<p> isnan(x)    </p>
+<blockquote>
+<p> 判断标量或者向量中的每个数据是否是非数据(not-a-number NaN)，如果是返回true；否则返回false;</p>
+</blockquote>
+<p> ldexp(x, n)    </p>
+<blockquote>
+<p> 计算x∗2n的值</p>
+</blockquote>
+<p> lerp(a, b, f)    </p>
+<blockquote>
+<p> 计算(1−f)∗a+b∗f或者a+f∗(b−a)的值。即在下限a和上限b之间进行插值，f表示权值。注意，如果a和b是向量，则权值f必须是标量或者等长的向量。</p>
+</blockquote>
+<p> lit(NdotL, NdotH, m)    </p>
+<blockquote>
+<p> N表示法向量；</p>
+<p> L表示入射光向量；</p>
+<p> H表示半角向量；</p>
+<p> m表示高光系数。 </p>
+<p> 函数计算环境光、散射光、镜面光的贡献，返回的4元向量。 </p>
+<p> X位表示环境光的贡献，总是1.0; </p>
+<p> Y位代表散射光的贡献，如果 N∙L&lt;0，则为0；否则为N∙L </p>
+<p> Z位代表镜面光的贡献，如果N∙L&lt;0 或者N∙H&lt;0，则位0；否则为(N∙L)m;</p>
+<p> W位始终位1.0</p>
+</blockquote>
+<p> log(x)    </p>
+<blockquote>
+<p> 计算ln(x)的值，x必须大于0</p>
+</blockquote>
+<p> log2(x)    </p>
+<blockquote>
+<p> 计算log(x)2的值，x必须大于0</p>
+</blockquote>
+<p> log10(x)    </p>
+<blockquote>
+<p> 计算log(x)10的值，x必须大于0</p>
+</blockquote>
+<p> max(a, b)    </p>
+<blockquote>
+<p> 比较两个标量或等长向量元素，返回最大值。</p>
+</blockquote>
+<p> min(a,b)    </p>
+<blockquote>
+<p> 比较两个标量或等长向量元素，返回最小值。</p>
+</blockquote>
+<p> modf(x, out ip)    </p>
+<blockquote>
+<p> 把x分解成整数和分数两部分，每部分都和x有着相同的符号，整数部分被保存在ip中，分数部分由函数返回</p>
+</blockquote>
+<p> mul(M, N)    </p>
+<blockquote>
+<p> 矩阵M和矩阵N的积，计算方法如下<br> <img src="https://www.github.com/AlianBlank/githubimgoss/raw/shader-imgs-oss/StoryWriter/mul(M,N" alt="mul(M,N)">.jpg)</p>
+</blockquote>
+<p> mul(M, v)    </p>
+<blockquote>
+<p> 矩阵M和列向量v的积，公式如下<br> <img src="https://www.github.com/AlianBlank/githubimgoss/raw/shader-imgs-oss/StoryWriter/mul(M,v" alt="mul(M,v)">.jpg)</p>
+</blockquote>
+<p> mul(v, M)    </p>
+<blockquote>
+<p> 行向量v和矩阵M的积，公式如下<br> <img src="https://www.github.com/AlianBlank/githubimgoss/raw/shader-imgs-oss/StoryWriter/mul(v,M" alt="mul(v,M)">.jpg)</p>
+</blockquote>
+<p> noise(x)    </p>
+<blockquote>
+<p> 根据它的参数类型，这个函数可以是一元、二元或三元噪音函数。返回的值在0和1之间，并且通常与给定的输入值一样</p>
+</blockquote>
+<p> pow(x, y)    </p>
+<blockquote>
+<p> xy</p>
+</blockquote>
+<p> radians(x)    </p>
+<blockquote>
+<p> 函数将角度值转换为弧度值</p>
+</blockquote>
+<p> round(x)    </p>
+<blockquote>
+<p> 返回四舍五入值。</p>
+</blockquote>
+<p> rsqrt(x)    </p>
+<blockquote>
+<p> x的平方根的倒数，x必须大于0</p>
+</blockquote>
+<p> saturate(x)    </p>
+<blockquote>
+<p> 把x限制到[0,1]之间</p>
+</blockquote>
+<p> sign(x)    </p>
+<blockquote>
+<p> 如果x&gt;0则返回1；否则返回0</p>
+</blockquote>
+<p> sin(x)    </p>
+<blockquote>
+<p> 输入参数为弧度，计算正弦值，返回值范围 为[-1,1]</p>
+</blockquote>
+<p> sincos(float x, out s, out c)    </p>
+<blockquote>
+<p> 该函数是同时计算x的sin值和cos值，其中s=sin(x)，c=cos(x)。该函数用于“同时需要计算sin值和cos值的情况”，比分别运算要快很多!</p>
+</blockquote>
+<p> sinh(x)    </p>
+<blockquote>
+<p> 计算x的双曲正弦</p>
+</blockquote>
+<p> smoothstep(min, max, x)    </p>
+<blockquote>
+<p> 值x位于min、max区间中。如果x=min，返回0；如果x=max，返回1；如果x在两者之间，</p>
+<p> 按照下列公式返回数据：<br>−2∗(x−minmax−min)3+3∗(x−minmax−min)2</p>
+</blockquote>
+<p> step(a, x)    </p>
+<blockquote>
+<p> 如果x&lt;a，返回0；否则，返回1</p>
+</blockquote>
+<p> sqrt(x)    </p>
+<blockquote>
+<p> 求x的平方根，x√，x必须大于0</p>
+</blockquote>
+<p> tan(x)    </p>
+<blockquote>
+<p> 计算x正切值</p>
+</blockquote>
+<p> tanh(x)    </p>
+<blockquote>
+<p> 计算x的双曲线切线</p>
+</blockquote>
+<p> transpose(M)    </p>
+<blockquote>
+<p> 矩阵M的转置矩阵<br>如果M是一个AxB矩阵，M的转置是一个BxA矩阵，它的第一列是M的第一行，第二列是M的第二行，第三列是M的第三行，等等</p>
+</blockquote>
+</blockquote>
+<h1 id="几何函数-Geometric-Functions"><a href="#几何函数-Geometric-Functions" class="headerlink" title="几何函数(Geometric Functions)"></a>几何函数(Geometric Functions)</h1><blockquote>
+<p> distance(pt1, pt2)    </p>
+<blockquote>
+<p> 两点之间的欧几里德距离（Euclidean distance）</p>
+</blockquote>
+<p> faceforward(N,I,Ng)    </p>
+<blockquote>
+<p> 如果Ng∙I&lt;0，返回N；否则返回-N。</p>
+</blockquote>
+<p> length(v)    </p>
+<blockquote>
+<p> 返回一个向量的模，即sqrt(dot(v,v))</p>
+</blockquote>
+<p> normalize(v)    </p>
+<blockquote>
+<p> 返回v向量的单位向量</p>
+</blockquote>
+<p> reflect(I, N)    </p>
+<blockquote>
+<p> 根据入射光纤方向I和表面法向量N计算反射向量，仅对三元向量有效</p>
+</blockquote>
+<p> refract(I,N,eta)    </p>
+<blockquote>
+<p> 根据入射光线方向I，表面法向量N和折射相对系数eta,计算折射向量。如果对给定的eta,I和N之间的角度太大，返回(0,0,0)。<br>只对三元向量有效</p>
+</blockquote>
+</blockquote>
+<h1 id="纹理映射函数-Texture-Map-Functions"><a href="#纹理映射函数-Texture-Map-Functions" class="headerlink" title="纹理映射函数(Texture Map Functions)"></a>纹理映射函数(Texture Map Functions)</h1><blockquote>
+<p> tex1D(sampler1D tex, float s)   </p>
+<blockquote>
+<p> 一维纹理查询 </p>
+</blockquote>
+<p> tex1D(sampler1D tex, float s, float dsdx, float dsdy)   </p>
+<blockquote>
+<p> 使用导数值（derivatives）查询一维纹理 </p>
+</blockquote>
+<p> Tex1D(sampler1D tex, float2 sz) </p>
+<blockquote>
+<p> 一维纹理查询，并进行深度值比较 </p>
+</blockquote>
+<p> Tex1D(sampler1D tex, float2 sz, float dsdx,float dsdy) </p>
+<blockquote>
+<p> 使用导数值（derivatives）查询一维纹理， 并进行深度值比较 </p>
+</blockquote>
+<p> Tex1Dproj(sampler1D tex, float2 sq) </p>
+<blockquote>
+<p> 一维投影纹理查询 </p>
+</blockquote>
+<p> Tex1Dproj(sampler1D tex, float3 szq) </p>
+<blockquote>
+<p> 一维投影纹理查询，并比较深度值 </p>
+</blockquote>
+<p> Tex2D(sampler2D tex, float2 s)   </p>
+<blockquote>
+<p> 二维纹理查询 </p>
+</blockquote>
+<p> Tex2D(sampler2D tex, float2 s, float2 dsdx, float2 dsdy)   </p>
+<blockquote>
+<p> 使用导数值（derivatives）查询二维纹理 </p>
+</blockquote>
+<p> Tex2D(sampler2D tex, float3 sz) </p>
+<blockquote>
+<p> 二维纹理查询，并进行深度值比较 </p>
+</blockquote>
+<p> Tex2D(sampler2D tex, float3 sz, float2 dsdx,float2 dsdy) </p>
+<blockquote>
+<p> 使用导数值（derivatives）查询二维纹理，并进行深度值比较</p>
+</blockquote>
+<p> Tex2Dproj(sampler2D tex, float3 sq) </p>
+<blockquote>
+<p> 二维投影纹理查询</p>
+</blockquote>
+<p> Tex2Dproj(sampler2D tex, float4 szq) </p>
+<blockquote>
+<p> 二维投影纹理查询，并进行深度值比较 </p>
+</blockquote>
+<p> texRECT(samplerRECT tex, float2 s) </p>
+<blockquote>
+<p> 二维非投影矩形纹理查询（OpenGL独有）</p>
+</blockquote>
+<p> texRECT (samplerRECT tex, float2 s, float2 dsdx, float2 dsdy) </p>
+<blockquote>
+<p> 二维非投影使用导数的矩形纹理查询（OpenGL独有）</p>
+</blockquote>
+<p> texRECT (samplerRECT tex, float3 sz) </p>
+<blockquote>
+<p> 二维非投影深度比较矩形纹理查询（OpenGL独有）</p>
+</blockquote>
+<p> texRECT (samplerRECT tex, float3 sz, float2 dsdx,float2 dsdy)  </p>
+<blockquote>
+<p> 二维非投影深度比较并使用导数的矩形纹理查询（OpenGL独有）</p>
+</blockquote>
+<p> texRECT proj(samplerRECT tex, float3 sq) </p>
+<blockquote>
+<p> 二维投影矩形纹理查询（OpenGL独有）</p>
+</blockquote>
+<p> texRECT proj(samplerRECT tex, float3 szq)</p>
+<blockquote>
+<p> 二维投影矩形纹理深度比较查询（OpenGL独有）</p>
+</blockquote>
+<p> Tex3d(sampler3D tex, float s)   </p>
+<blockquote>
+<p> 三维纹理查询</p>
+</blockquote>
+<p> Tex3D(sampler3D tex, float3 s, float3 dsdx, float3 dsdy)   </p>
+<blockquote>
+<p> 结合导数值（derivatives）查询三维纹理 </p>
+</blockquote>
+<p> Tex3Dproj(sampler3D tex, float4 szq) </p>
+<blockquote>
+<p> 查询三维投影纹理，并进行深度值比较 </p>
+</blockquote>
+<p> texCUBE(samplerCUBE tex, float3 s)   </p>
+<blockquote>
+<p> 查询立方体纹理 </p>
+</blockquote>
+<p> texCUBE (samplerCUBE tex, float3 s, float3 dsdx, float3 dsdy)   </p>
+<blockquote>
+<p> 结合导数值（derivatives）查询立方体纹理 </p>
+</blockquote>
+<p> texCUBEproj (samplerCUBE tex, float4 sq) </p>
+<blockquote>
+<p> 查询投影立方体纹理</p>
+</blockquote>
+</blockquote>
+<h3 id="在这个表中，每个函数第二个参数的名字指明了在执行纹理查询的时候，它的值是如果被使用的"><a href="#在这个表中，每个函数第二个参数的名字指明了在执行纹理查询的时候，它的值是如果被使用的" class="headerlink" title="在这个表中，每个函数第二个参数的名字指明了在执行纹理查询的时候，它的值是如果被使用的:"></a><em>在这个表中，每个函数第二个参数的名字指明了在执行纹理查询的时候，它的值是如果被使用的:</em></h3><blockquote>
+<p>  <em>s表示这是一个一元、二元或三元纹理坐标。</em></p>
+<p>  <em>z表示这是一个用来进行阴影贴图查找的深度比较值。</em></p>
+<p>  <em>q表示这是一个透视值，在进行纹理查找之前，它被用来除以纹理坐标（s）。</em></p>
+<p>  当你使用的纹理函数允许你指定一个深度比较值的时候，与之相关联的纹理单元必须被设置成深度比较纹理。否则，深度比较实际上不会被执行。</p>
+</blockquote>
+<h1 id="偏导数函数-Derivative-Functions"><a href="#偏导数函数-Derivative-Functions" class="headerlink" title="偏导数函数(Derivative Functions)"></a>偏导数函数(Derivative Functions)</h1><blockquote>
+<p> ddx(a)    </p>
+<blockquote>
+<p> 参数a对应一个像素位置,返回该像素再X轴上的偏导数</p>
+</blockquote>
+<p> ddy(a)    </p>
+<blockquote>
+<p> 参数a对应一个像素位置,返回该像素在Y轴上的偏导数</p>
+</blockquote>
+</blockquote>
+<h1 id="调试函数-Debugging-Function"><a href="#调试函数-Debugging-Function" class="headerlink" title="调试函数(Debugging Function)"></a>调试函数(Debugging Function)</h1><blockquote>
+<p> void debug(float4 x)    </p>
+<blockquote>
+<p> 如果在编译时设置了DEBUG，片段着 色程序中调用该函数可以将值x作为COLOR语义的最终输出；否则该函数什么也不做。</p>
+</blockquote>
+</blockquote>
+
+    
+
+    <div class="footer">
+      发现错误或想贡献文档?
+      <a href="https://github.com/AlianBlank/alianblank.io/tree/master/src/unity/Unity Shader CG Standard function library.md" target="_blank">
+        在 Github 上编辑此文档!
+      </a>
+    </div>
+</div>
+
+                
+            </div>
+            <script src="/js/smooth-scroll.min.js"></script>
+        
+    
+
+
+        <!-- main custom script for sidebars, version selects etc. -->        
+        <script src="/js/css.escape.js"></script>
+        <script src="/js/common.js"></script>
+    </body>
+</html>
