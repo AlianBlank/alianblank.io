@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="content" style="text-align: center; width: 720px; margin: 0 auto;">
+
+        <p>津巴多时间观量表（ZTPI）</p>
+
+        <p>这是一份正规的心理学表《津巴多时间观念表》 ，感谢您在百忙之中抽出时间完成本次测试。</p>
+
+        <p>本测试结果帮助您衡量您的时间观导向的同时，仅用于学术研究，不上传任何信息</p>
+
+        <p>了解了您的时间观倾向，您可以用时间观角度来解释生活工作中的各种现象。如果您已经开始时间管理，那么该测试可以帮助您检验您的时间管理效果。</p>
+        <div id="question_list" style="text-align: left;">
+
+        </div>
+        <div id="result" style="text-align: left;">
+            <div>算分规则</div>
+            <p>在记分之前，你需要把第9、24、25、41和56题的分数反转，也就是：1变成5；2变成4；3变成3；4变成2；5变成1。</p>
+            <span> 把分数反转之后，把每个类别的问题的答案总分加起来。每类问题的分求出来之后，把总分除以该类别的问题总数。最后，5个类别都会分别得到一个平均分。</span>
+
+            <p>【关注过去的消极时间观】</p>
+            <span>
+                把你在第4、5、16、22、27、33、34、36、50和54题的得分加起来之后，将总分除以10。
+            </span>
+            <p>【关注当下的享乐主义时间观】</p>
+            <span>
+
+                把你在第1、8、12、17、19、23、26、28、31、32、42、44、46、48和55题的得分加起来之后，将总分除以15。
+            </span>
+            <p>【关注未来的时间观】</p>
+            <span>
+
+                把你在第6、9（反转）、10、13、18、 21、24（反转） 30、40、43、45、51和56 （反转）题的得分加起来之后，将总分除以13。
+            </span>
+            <p>【关注过去的积极时间观】</p>
+            <span>
+
+                把你在第2、7、11、15、20、25（反转）、29、41（反转）和49题的得分加起来之后，将总分除以9。
+            </span>
+            <p>【当下宿命时间观】</p>
+            <span>
+
+                把你在第3、14、 35、37、38、39、47、52和53题的得分加起来之后，将总分除以9。
+            </span>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <input type="button" value="计算得分" id="submit" />
+
+        <br />
+        <br />
+        <br />
+        <br />
+    </div>
+
+
+    <script>
+        window.onload = function () {
+
+            var question_list_tables = [
+                '1.我认为和朋友一起参加聚会是生活中很重要的乐趣',
+                '2.熟悉的童年景象,声音和气味经常会勾起我很多美好的回忆',
+                '3.命运决定了我人生中大部分的事情',
+                '4.我经常会想，在那段人生中我应该这样做而不应该那样做',
+                '5.我的决定很大程度上取决于我周围的人和事',
+                '6.我认为我们的每天都应该在早晨就提前做好计划',
+                '7.回想过去能让我感到快乐',
+                '8.我做事比较冲动',
+                '9.如果事情不能按时完成，我也不会焦虑',
+                '10.当我想做成某一件事情时，我会设定目标，仔细考虑各种能达成目标的方法',
+                '11.总的来讲，我的美好的回忆比不好的回忆要多很多',
+                '12.当我聆听喜欢的音乐时，我常常会忘记时间的流逝',
+                '13.赶明天的任务和做其他必要的工作比今天晚上的娱乐活动更重要',
+                '14.既然要发生的事情总会发生，那么我做什么并不重要',
+                '15.我喜欢听那些关于“过去的美好时代”的故事',
+                '16.那些过去的痛苦经历总是在我的脑海里重复出现',
+                '17.我尽可能充实地度过我的每一天',
+                '18.迟到让我觉得很难过',
+                '19.理想状态下，我会把每一天都当作生命中的最后一天来度过',
+                '20.那些美好时光的快乐记忆总是经常出现在我的脑海里',
+                '21.我总是准时兑现我对朋友或者上级的承诺',
+                '22.我过去遭受过侮辱和拒绝',
+                '23.我经常在冲动之下做决定',
+                '24.我总是活在当下，而不是尝试去规划每天',
+                '25.过去有太多不愉快的回忆，我情愿不去回想',
+                '26.在我的生活中寻找刺激很重要',
+                '27.我曾经在生活中犯下了令我后悔的错误',
+                '28.我觉得享受自己正在做的事比把事情按时完成更重要',
+                '29.我常常怀念我的童年',
+                '30.在做决定之前，我都会衡量成本和收益',
+                '31.冒险让我的生活不那么无趣',
+                '32.享受生活的旅程比专注于达成人生目标更重要',
+                '33.事情很少会按我预想的那样发展',
+                '34.我很难忘记儿时不愉快的记忆',
+                '35.如果我总是想着目标.结果和产出，就会让过程变得非常无趣，无法专注地做事',
+                '36.当我在享受当下的时候，我也会不自觉地把现在和过去类似的经历做比较',
+                '37.你很难真的为未来做规划，因为事情的变化真的太快了',
+                '38.我人生的旅途是被我不能改变和影响的力量所控制的',
+                '39.为明天而忧虑一点儿用也没有，因为没有什么事是你可以左右的',
+                '40.我总是持续稳定地推进我的工作，最后按时完成任务',
+                '41.我总是会在家人讨论从前时发呆走神',
+                '42.为了让生活更刺激，我会选择去冒险',
+                '43.我会把要做的事情列出来',
+                '44.我经常都会听从内心去做决定，而不是听从我的理智',
+                '45.当我知道自己有事情要做的时候，我可以抵挡诱惑',
+                '46.我发现自己常常会被兴奋冲昏了头脑',
+                '47.现在的生活太复杂了，我更想过从前的简单生活',
+                '48.我更喜欢交随性的朋友而不是有板有眼的朋友',
+                '49.我喜欢定期重复的家庭传统或者仪式',
+                '50.我有时候会回想起以的发生过的不好的事情',
+                '51.如果困难的.无聊的工作可以让我领先别人一步，我也会去做',
+                '52.把赚来的钱在今天花掉比存起来更好',
+                '53.很多时候运气比努力更重要',
+                '54.我有时候会想起那些生活里错失的美好事物',
+                '55.我喜欢亲密关系，并充满激情',
+                '56.我总有时间把落下的工作进度补回来'
+            ];
+
+            // 反转
+            var revert = [9, 24, 25, 41, 56];
+
+            // 过去消极
+            var past_negativity = [4, 5, 16, 22, 27, 33, 34, 36, 50, 54];
+            // 当下享乐
+            var enjoyment_moment = [1, 8, 12, 17, 19, 23, 26, 28, 31, 32, 42, 44, 46, 48, 55];
+            // 未来
+            var future = [6, 9, 10, 13, 18, 21, 24, 30, 40, 43, 45, 51, 56];
+            // 过去积极
+            var past_positive = [2, 7, 11, 15, 20, 25, 29, 41, 49];
+            // 当下宿命
+            var present_destiny = [3, 14, 35, 37, 38, 39, 47, 52, 53];
+
+            var question_list = document.getElementById('question_list');
+
+            for (var i = 1; i <= 56; i++) {
+                var div_content = document.createElement("div");
+                div_content.setAttribute("id", i);
+
+                var div_question = document.createElement("div");
+                div_question.setAttribute("id", 'question_' + i);
+                div_question.innerText = question_list_tables[i - 1];
+                var br1 = document.createElement("br");
+
+                var div_answer = document.createElement("div");
+                div_answer.setAttribute("id", "answer_" + i);
+
+                div_answer.innerHTML = ' <input type="radio" name="' + i + '">极不符合' +
+                    '<input type="radio" name="' + i + '">不符合' +
+                    '<input type="radio" name="' + i + '">中间状态' +
+                    '<input type="radio" name="' + i + '">符合' +
+                    '<input type="radio" name="' + i + '">极为符合';
+                var br2 = document.createElement("br");
+                var br3 = document.createElement("br");
+                div_content.appendChild(div_question);
+                div_content.appendChild(br1);
+                div_content.appendChild(div_answer);
+                div_content.appendChild(br2);
+                div_content.appendChild(br3);
+                question_list.appendChild(div_content);
+            }
+
+            function is_revert(value) {
+
+                for (var j = 0; j < revert.length; j++) {
+                    if (value === revert[j]) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+
+
+            function calculate_result_list(list) {
+                var result_list = [];
+                //过去消极
+                for (var i = 0; i < list.length; i++) {
+
+                    var ansuer_children = document.getElementById('answer_' + [list[i]]).children;
+                    for (var j = 0; j < ansuer_children.length; j++) {
+                        if (ansuer_children[j].checked) {
+                            var result = j + 1;
+                            if (is_revert(list[i])) {
+                                result_list.push(6 - result);
+                            } else {
+                                result_list.push(result);
+                            }
+                        }
+                    }
+                }
+                return result_list;
+            }
+
+
+            document.getElementById('submit').onclick = function () {
+                //过去消极
+                var past_negativity_result_list = calculate_result_list(past_negativity);
+                //当下享乐
+                var enjoyment_moment_result_list = calculate_result_list(enjoyment_moment);
+                //未来
+                var future_result_list = calculate_result_list(future);
+                //过去积极
+                var past_positive_result_list = calculate_result_list(past_positive);
+                //当下宿命
+                var present_destiny_result_list = calculate_result_list(present_destiny);
+
+                var past_negativity_result = 0;
+                for (var i = 0; i < past_negativity_result_list.length; i++) {
+                    past_negativity_result += past_negativity_result_list[i];
+                }
+                console.log(past_negativity_result / 10);
+
+                var enjoyment_moment_result = 0;
+                for (var i = 0; i < enjoyment_moment_result_list.length; i++) {
+                    enjoyment_moment_result += enjoyment_moment_result_list[i];
+                }
+                console.log(enjoyment_moment_result / 15);
+
+
+                var future_result = 0;
+                for (var i = 0; i < future_result_list.length; i++) {
+                    future_result += future_result_list[i];
+                }
+                console.log(future_result / 13);
+
+
+                var past_positive_result = 0;
+                for (var i = 0; i < past_positive_result_list.length; i++) {
+                    past_positive_result += past_positive_result_list[i];
+                }
+                console.log(past_positive_result / 9);
+
+
+                var present_destiny_result = 0;
+                for (var i = 0; i < present_destiny_result_list.length; i++) {
+                    present_destiny_result += present_destiny_result_list[i];
+                }
+                console.log(present_destiny_result / 9);
+
+
+                var result = document.getElementById('result');
+
+                var div_result = document.createElement("div");
+                div_result.innerText = "【关注过去的消极时间观】：" + past_negativity_result / 10;
+                result.appendChild(div_result);
+
+                div_result = document.createElement("div");
+                div_result.innerText = "【关注当下的享乐主义时间观】：" + enjoyment_moment_result / 15;
+                result.appendChild(div_result);
+
+
+                div_result = document.createElement("div");
+                div_result.innerText = "【关注未来的时间观】：" + future_result / 13;
+                result.appendChild(div_result);
+
+
+                div_result = document.createElement("div");
+                div_result.innerText = "【关注过去的积极时间观】：" + past_positive_result / 9;
+                result.appendChild(div_result);
+
+                div_result = document.createElement("div");
+                div_result.innerText = "【当下宿命时间观】：" + present_destiny_result / 9;
+                result.appendChild(div_result);
+            };
+        };
+    </script>
+    <hr />
+    <footer style="text-align: center; width: 720px; margin: 0 auto;">
+        by Blank   <a href="https://alianhome.com">alianhome.com</a>
+    </footer>
+</body>
+</html>
